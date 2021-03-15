@@ -1,0 +1,142 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue:hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--Very-Light-Gray);
+    font-size: 15px;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 200;
+    color: var(--Very-Dark-Blue);
+}
+
+span {
+    display: block;
+    font-weight: 600;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: var(--Very-Dark-Blue);
+}
+
+.descrition {
+    text-align: center;
+    max-width: calc(1440px/2);
+    color: var(--Very-Dark-Blue);
+}
+
+.cards {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+h2 {
+    color: var(--Very-Dark-Blue);
+}
+
+p {
+    color: var(--Grayish-Blue);
+}
+
+.card {
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	padding: 30px;
+    position: relative;
+    overflow: hidden;
+	margin: 15px;
+	width: 350px;
+}
+
+.card::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	width: 100%;
+}
+
+.box-red::after {
+	background-color: hsl(0, 78%, 62%);
+}
+
+.box-cyan::after {
+	background-color: hsl(180, 62%, 55%);
+}
+
+.box-orange::after {
+	background-color: hsl(34, 97%, 64%);
+}
+
+.box-blue::after {
+	background-color: hsl(212, 86%, 64%);
+}
+
+
+.box-push {
+	transform: translateY(50%);
+}
+
+.box-img img {
+    margin-top: 30px;
+    display: block;
+	margin-left: auto;
+}
+
+@media (max-width: 1141px) {
+	.box-push {
+		transform: translateY(0);
+    }
+}
+
+@media (max-width: 991px) {
+	.box-push {
+		transform: translateY(0);
+    }
+}
+@media (max-width: 775px) {
+	.box-push {
+		transform: translateY(0);
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.6em;
+    }
+    span {
+        font-size: 1.6em; 
+    }
+}
